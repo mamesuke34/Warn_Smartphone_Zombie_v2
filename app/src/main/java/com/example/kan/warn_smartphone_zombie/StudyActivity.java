@@ -285,6 +285,7 @@ public class StudyActivity extends Activity implements Runnable, SensorEventList
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
     }
+
     //ダイアログの表示
     public void Dialog () {
         d_flag = true;
@@ -309,6 +310,14 @@ public class StudyActivity extends Activity implements Runnable, SensorEventList
                 walking = false;
                 running = false;
                 }});
+        builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
+            public void onCancel(DialogInterface dialog) {
+                // キャンセルされたときの処理
+                d_flag = false;
+                stand = false;
+                walking = false;
+                running = false;
+            }});
         builder.show();
     }
 }

@@ -73,7 +73,7 @@ public class MainActivity extends Activity implements Runnable, SensorEventListe
 
     //ボタンクリック
     public void onClick(View v) {
-        if (v == START){
+        if ( v == START ){
             flag = 1;
 
             //WEKAの学習データと分類機を生成
@@ -134,6 +134,7 @@ public class MainActivity extends Activity implements Runnable, SensorEventListe
             weka();
         }
     }
+
 
     @Override
     public void onAccuracyChanged(Sensor sensor, int accuracy) {
