@@ -312,7 +312,11 @@ public class StudyActivity extends Activity implements Runnable, SensorEventList
                 }});
         builder.setOnCancelListener(new DialogInterface.OnCancelListener() {
             public void onCancel(DialogInterface dialog) {
+<<<<<<< HEAD
                 // User cancelled the dialog
+=======
+                // キャンセルされたときの処理
+>>>>>>> origin/master
                 d_flag = false;
                 stand = false;
                 walking = false;
